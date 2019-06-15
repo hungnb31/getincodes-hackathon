@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import styled from 'styled-components';
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import styled from 'styled-components'
 
-import Home from './containers/Home';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Learning from './containers/Learning';
+import Home from './containers/Home'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Learning from './containers/Learning'
 import Profile from './containers/Profile'
 
 const AppContainer = styled.div`
@@ -24,8 +24,8 @@ const App = () => (
       <AppWrapper>
         <Header />
         <Route exact path="/" component={Home} />
-        <Route exact path="/learning" component={Learning} />
         <Route exact path="/me" component={Profile} />
+        <Route exact path="/learning" component={Learning} />
       </AppWrapper>
       <Footer />
     </Router>
