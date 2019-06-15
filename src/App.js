@@ -24,8 +24,8 @@ const App = () => (
       <AppWrapper>
         <Header />
         <Route exact path="/" component={Home} />
-        <Route exact path="/learning" component={Home} />
-        <Route exact path="/me" component={Home} />
+        <Route exact path="/learning" component={Learning} />
+        <Route exact path="/me" component={Profile} />
       </AppWrapper>
       <Footer />
     </Router>

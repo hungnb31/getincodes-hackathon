@@ -35,6 +35,7 @@ export const FooterHeader = styled.div`
 export const FooterItem = styled.div`
   font-size: 15px;
   color: #838383;
+  cursor: pointer;
   margin-top: 20px;
 `
 
