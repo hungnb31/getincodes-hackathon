@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Home from './containers/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Learning from './containers/Learning';
+import Profile from './containers/Profile'
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -22,6 +24,8 @@ const App = () => (
       <AppWrapper>
         <Header />
         <Route exact path="/" component={Home} />
+        <Route exact path="/learning" component={Home} />
+        <Route exact path="/me" component={Home} />
       </AppWrapper>
       <Footer />
     </Router>
