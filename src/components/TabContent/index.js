@@ -11,6 +11,7 @@ const TabContent = (props) => (
         props.content.map(item => {
           return (
             <TabItem
+              key={item.alt}
               image={item.image}
               alt={item.alt}
               itemTag={item.itemTag}

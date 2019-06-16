@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
 `
 
-export const Menu = styled.div`
+export const HeaderMenu = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
