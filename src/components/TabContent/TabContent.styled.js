@@ -8,10 +8,18 @@ export const TabItemWrapper = styled.div`
   box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.05);
   max-width: 330px;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: .4s;
+  :hover {
+    transform: scale(1.05);
+  }
+  :hover img {
+    filter: grayscale(50%);
+  }
 `
 
 export const TabItemImage = styled.img`
   width: 330px;
+  transition: .3s;
 `
 
 export const ItemTag = styled.div`
@@ -36,6 +44,9 @@ export const ItemTitle = styled.div`
   margin-top: 15px;
   font-size: 18px;
   color: black;
+  :hover {
+    text-decoration: underline;
+  }
 `
 
 export const TabItemContent = styled.div`

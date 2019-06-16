@@ -1,0 +1,21 @@
+{
+    "getinco": {
+        "awscloudformation": {
+            "AuthRoleName": "getincodes-hackathon-getinco-20190616085144-authRole",
+            "UnauthRoleArn": "arn:aws:iam::912063239882:role/getincodes-hackathon-getinco-20190616085144-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::912063239882:role/getincodes-hackathon-getinco-20190616085144-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "getincodes-hackathon-getinco-20190616085144-deployment",
+            "UnauthRoleName": "getincodes-hackathon-getinco-20190616085144-unauthRole",
+            "StackName": "getincodes-hackathon-getinco-20190616085144",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:912063239882:stack/getincodes-hackathon-getinco-20190616085144/49ac61e0-8fd9-11e9-a676-06d8b68f4590"
+        },
+        "categories": {
+            "auth": {
+                "getincodeshackathon24225017": {
+                    "hostedUIProviderCreds": "[]"
+                }
+            }
+        }
+    }
+}

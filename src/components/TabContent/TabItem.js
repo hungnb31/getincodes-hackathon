@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import {
   TabItemContainer,
@@ -17,7 +18,9 @@ import clock from '../../assets/clock.svg'
 const TabItem = (props) => (
   <TabItemContainer>
     <TabItemWrapper>
-      <TabItemImage src={props.image} alt={props.alt} />
+      <Link to="/learning">
+        <TabItemImage src={props.image} alt={props.alt} />
+      </Link>
       <TabItemContent>
         <ItemTag>{props.itemTag}</ItemTag>
         {
@@ -32,7 +35,9 @@ const TabItem = (props) => (
             </ItemPrice>
           )
         }
-        <ItemTitle>{props.itemTitle}</ItemTitle>
+        <Link to="/learning" style={{'textDecoration': 'none'}}>
+          <ItemTitle>{props.itemTitle}</ItemTitle>
+        </Link>
         <ItemInfo>
           <div id="path">
             <img src={lession} alt="lesson icon" />
@@ -45,9 +50,11 @@ const TabItem = (props) => (
         </ItemInfo>
         {
           props.button && (
-            <ItemButton>
-              {props.button}
-            </ItemButton>
+            <Link to="/learning">
+              <ItemButton>
+                {props.button}
+              </ItemButton>
+            </Link>
           )
         }
       </TabItemContent>
