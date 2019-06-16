@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tabs } from 'antd'
+import { Link } from 'react-router-dom'
 import 'antd/lib/tabs/style/index.css'
 import styled from 'styled-components'
 
@@ -53,10 +54,12 @@ const Detail = () => (
           <div id="description">This course will teach you a high level view of Angular, to assist you in either understanding <br /> Angular better for your own development, or learning when to use Angular vs. other front end frameworks.</div>
           <div id="control">
             <button style={{ display: 'flex', alignItems: 'center' }}>
+              <Link to="/learning" style={{color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', whiteSpace: 'nowrap'}}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clip-rule="evenodd" d="M12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22ZM11.86 15.14L14.65 12.35C14.84 12.16 14.84 11.84 14.64 11.64L11.85 8.85C11.54 8.53 11 8.75 11 9.2V14.79C11 15.24 11.54 15.46 11.86 15.14Z" fill="white" />
               </svg>&nbsp;
                 Start Course
+              </Link>
           </button>
             <button className="sub-button">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

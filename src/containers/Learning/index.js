@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Button, Icon, Avatar} from 'antd'
-import 'antd/lib/button/style/index.css'
-import 'antd/lib/icon/style/index.css'
-import 'antd/lib/avatar/style/index.css'
 import logo from '../../assets/logo.svg'
 import avatar from '../../assets/images/user-avatar.png'
 import { Link } from 'react-router-dom'
+import { Player } from 'video-react'
+
+import 'antd/lib/button/style/index.css'
+import 'antd/lib/icon/style/index.css'
+import 'antd/lib/avatar/style/index.css'
+import 'video-react/dist/video-react.css'
 
 const LeftDiv = styled.div`
   transition: .5s;
@@ -14,7 +17,7 @@ const LeftDiv = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: #fafafa;
+  background: ${props => props.active ? '#fafafa' : 'rgba(255,255,255,.2)'};
 `
 const ListItem = styled.div`
   cursor: pointer;
@@ -45,10 +48,30 @@ const CustomInput = styled.input`
     outline: none;
   }
 `
+const CustomPlayer = styled(Player)`
+  height: 100%!important;
+  .video-react-video:focus {
+    outline: none!important;
+  }
+  .video-react-big-play-button {
+    left: 50%!important;
+    top: 50%!important;
+    margin-left: -60px;
+    margin-top: -22px;
+    border: none!important;
+  }
+  .video-react-control-bar {
+    height: 44px!important;
+    background-color: rgba(32, 32, 32, 0.3)!important;
+    > * {
+      font-size: 15px!important;
+    }
+  }
+`
 
 class Learning extends React.Component {
   state = {
-    left: true,
+    left: false,
     activeLesson: +localStorage.activeLes > -1 ? +localStorage.activeLes : 0,
     course: {
       title: 'Java Tutorial For Complete Beginner'
@@ -72,7 +95,7 @@ class Learning extends React.Component {
       </ListItem>
     ))
     return (
-      <div style={{display: 'flex', height: '100vh'}}>
+      <div style={{display: 'flex', height: '100vh', background: '#000'}}>
         <LeftDiv active={this.state.left}>
           <Button
             size="large"
@@ -88,14 +111,19 @@ class Learning extends React.Component {
             </div>
           }
         </LeftDiv>
-        <div style={{flexGrow: 1, background: '#000', height: '100%', overflow: 'auto', boxShadow: '0 0 4px rgba(0,0,0,.25)'}}>
-          <div style={{height: '60px', maxHeight: '60px', display: 'flex'}}>
+        <div style={{flexGrow: 1, display: 'flex', flexDirection: 'column', background: '#000', height: '100%', overflow: 'hidden', boxShadow: '0 0 4px rgba(0,0,0,.25)'}}>
+          <div style={{height: '60px', minHeight: '60px', maxHeight: '60px', display: 'flex'}}>
             <Link to="/" style={{padding: '12px 12px 0', marginRight: '16px'}}>
               <img src={logo} alt="logo" height="36px" />
             </Link>
             <div style={{height: '100%', display: 'flex', alignItems: 'center'}}>
               <CustomLink to="/detail" style={{color: '#eaeaea', fontSize: '16px'}}>{this.state.course.title}</CustomLink>
             </div>
+          </div>
+          <div style={{flexGrow: '1', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <CustomPlayer>
+              <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+            </CustomPlayer>
           </div>
         </div>
         <div style={{width: '25vw', height: '100%', overflow: 'auto', background: '#fafafa'}}>

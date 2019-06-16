@@ -18,7 +18,7 @@ import clock from '../../assets/clock.svg'
 const TabItem = (props) => (
   <TabItemContainer>
     <TabItemWrapper>
-      <Link to="/learning">
+      <Link to="/detail">
         <TabItemImage src={props.image} alt={props.alt} />
       </Link>
       <TabItemContent>

@@ -56,9 +56,7 @@ const Header = (props) => {
   return (
     <HeaderContainer>
         <HeaderMenu>
-          <Link to="/">
-            <LogoWrapper src={logo} alt="logo" />
-          </Link>
+          <LogoWrapper src={logo} alt="logo" />
           {
             MenuItems.map(item => {
               return (
