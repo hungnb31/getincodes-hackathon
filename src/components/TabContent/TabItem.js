@@ -43,9 +43,13 @@ const TabItem = (props) => (
             <div id="des">{props.time}</div>
           </div>
         </ItemInfo>
-        <ItemButton>
-          {props.button}
-        </ItemButton>
+        {
+          props.button && (
+            <ItemButton>
+              {props.button}
+            </ItemButton>
+          )
+        }
       </TabItemContent>
     </TabItemWrapper>
   </TabItemContainer>

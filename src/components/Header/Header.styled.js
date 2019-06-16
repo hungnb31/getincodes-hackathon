@@ -25,6 +25,7 @@ export const UserMenu = styled.div`
 
 export const UserAvatar = styled.img`
   width: 45px;
+  cursor: pointer;
   height: 45px;
 `
 
