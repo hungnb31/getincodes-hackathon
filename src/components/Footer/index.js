@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { withRouter } from 'react-router-dom'
 import logo from '../../assets/logo.svg'
 import social from '../../assets/social.svg'
 import {
@@ -12,8 +12,10 @@ import {
   FooterSocial
 } from './Footer.styled'
 
-const Footer = () => (
-  <FooterContainer>
+const Footer = (props) => {
+  if (props.location.pathname === '/learning') return null
+  return (
+    <FooterContainer>
     <FooterWrapper>
       <FooterColumn>
         <img src={logo} alt="logo" />
@@ -55,6 +57,7 @@ const Footer = () => (
       </FooterColumn>
     </FooterWrapper>
   </FooterContainer>
-)
+  )
+}
 
-export default Footer;
+export default withRouter(Footer);

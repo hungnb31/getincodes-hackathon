@@ -22,12 +22,12 @@ const App = () => (
   <AppContainer>
     <Router>
       <AppWrapper>
-        {window.location.pathname !== '/learning' && <Header />}
+        <Header />
         <Route exact path="/" component={Home} />
         <Route exact path="/me" component={Profile} />
       </AppWrapper>
       <Route exact path="/learning" component={Learning} />
-      {window.location.pathname !== '/learning' && <Footer />}
+      <Footer />
     </Router>
   </AppContainer>
 )

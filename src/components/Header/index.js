@@ -52,6 +52,7 @@ const MenuItems = [
 ]
 
 const Header = (props) => {
+  if (props.location.pathname === '/learning') return null
   return (
     <HeaderContainer>
         <HeaderMenu>
