@@ -35,7 +35,7 @@ const TabItem = (props) => (
             </ItemPrice>
           )
         }
-        <Link to="/learning" style={{'textDecoration': 'none'}}>
+        <Link to="/detail" style={{'textDecoration': 'none'}}>
           <ItemTitle>{props.itemTitle}</ItemTitle>
         </Link>
         <ItemInfo>
